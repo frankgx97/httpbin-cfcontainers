@@ -1,7 +1,9 @@
 import { Container, loadBalance } from '@cloudflare/containers';
 
 export class httpbin_cfContainer extends Container {
+    // Make sure the port here matches the port exposed by the container.
 	defaultPort = 80;
+    // Container will "sleep" after this time.
 	sleepAfter = '5m';
 
 	override onStart() {
